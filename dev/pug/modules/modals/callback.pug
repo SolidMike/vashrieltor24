@@ -1,0 +1,7 @@
+#modal-callback.modal-callback
+    .modal-callback__body
+        .modal-callback__title Заказать звонок
+        form(action="#" method="post").modal-callback__form
+            input(type="text" name="name" placeholder="Имя").input
+            input(type="tel" name="phone" placeholder="Телефон").input
+            +button('', 'Заказать', false)(id="modal-callback__submit")

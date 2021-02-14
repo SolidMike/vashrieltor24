@@ -1,0 +1,5 @@
+mixin button(buttonClass, buttonText, disabled)
+    button(class="btn " + buttonClass disabled=disabled type="submit")&attributes(attributes) #{buttonText}
+
+mixin link(linkClass, linkHref, linkText)
+    a(class="btn " + linkClass href=linkHref)&attributes(attributes) #{linkText}

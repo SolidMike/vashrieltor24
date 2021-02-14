@@ -1,0 +1,64 @@
+$(document).ready(function () {
+    svg4everybody({});
+});
+
+
+// Полифилы
+
+// forEach IE 11
+if ('NodeList' in window && !NodeList.prototype.forEach) {
+    console.info('polyfill for IE11');
+    NodeList.prototype.forEach = function (callback, thisArg) {
+        thisArg = thisArg || window;
+        for (var i = 0; i < this.length; i++) {
+            callback.call(thisArg, this[i], i, this);
+        }
+    };
+}
+
+// closest IE 11
+(function () {
+    if (!Element.prototype.closest) {
+        Element.prototype.closest = function (css) {
+            var node = this;
+            while (node) {
+                if (node.matches(css)) return node;
+                else node = node.parentElement;
+            }
+            return null;
+        };
+    }
+})();
+
+// matches IE 11
+(function () {
+    if (!Element.prototype.matches) {
+        Element.prototype.matches = Element.prototype.matchesSelector ||
+            Element.prototype.webkitMatchesSelector ||
+            Element.prototype.mozMatchesSelector ||
+            Element.prototype.msMatchesSelector;
+    }
+})();
+
+//Array.form IE 11
+if (!Array.from) {
+    Array.from = function (object) {
+        'use strict';
+        return [].slice.call(object);
+    };
+}
+
+$(document).ready(function(){
+    $(".modal-btn").fancybox();
+    $("#modal-callback").submit(function(){ return false; });
+    $("#modal-callback__submit").on("click", function(){
+        $("#modal-callback").fadeOut("fast", function(){
+            $(this).before("<p><strong>Ваше сообщение отправлено!</strong></p>");
+            setTimeout("$.fancybox.close()", 1000);
+        });
+    });
+    $('[data-fancybox="gallery"]').each(function () {
+        const relValue = $(this).attr('rel')
+        $('[data-fancybox="gallery"][rel="'+relValue+'"]').fancybox({})
+    })
+});

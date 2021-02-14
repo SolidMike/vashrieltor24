@@ -1,0 +1,19 @@
+.btn {
+  padding: .5rem 2.5rem;
+  text-transform: uppercase;
+  color: $white;
+  background-color: $red;
+  border-radius: .2rem;
+  border: none;
+  cursor: pointer;
+  text-decoration: none;
+  transition: all .4s;
+  display: inline-block;
+  font-weight: 600;
+  &:hover {
+    background-color: #bf0000;
+  }
+  &:active {
+    box-shadow: inset 0px 0px 10px 2px #6f3f3f;
+  }
+}

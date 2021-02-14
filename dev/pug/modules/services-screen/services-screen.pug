@@ -1,0 +1,62 @@
+-
+    const servicesItems = [
+        {
+            src: './static/images/content/services-1.jpg',
+            title: 'Купля-продажа',
+            descr: 'Квартиры <br> Коммерческая недвижимость Подбор недвижимости с аукционов и участие в торгах',
+            index: '01',
+            href: '#',
+        },
+        {
+            src: './static/images/content/services-2.jpg',
+            title: 'Проблемная недвижимость',
+            descr: 'Выгодное решение вопросов с залоговой недвижимостью на любой стадии. <br> До и после суда.',
+            index: '02',
+            href: '#',
+        },
+        {
+            src: './static/images/content/services-3.jpg',
+            title: 'Ипотека',
+            descr: 'Помощь в получении в любом банке <br> Военная ипотека <br> Реализация жилищных сертификатов, субсидий <br> С материнским капиталом',
+            index: '03',
+            href: '#',
+        },
+        {
+            src: './static/images/content/services-4.jpg',
+            title: 'Срочный <br> выкуп/продажа квартир',
+            descr: 'Оценка ликвидности <br> Максимальная цена в залоге',
+            index: '04',
+            href: '#',
+        },
+        {
+            src: './static/images/content/services-5.jpg',
+            title: 'Приватизация',
+            descr: 'В том числе с долгами',
+            index: '05',
+            href: '#',
+        },
+        {
+            src: './static/images/content/services-6.jpg',
+            title: 'Управление недвижимостью',
+            descr: 'Без личного присутствия <br> Получение максимального дохода от инвестирования <br> Официальный договор',
+            index: '06',
+            href: '#',
+        },
+        {
+            src: './static/images/content/services-7.jpg',
+            title: 'Сопровождение <br> сделок',
+            descr: 'Сбор документов <br> Подготовка для нотариуса Консультация по разделу недвижимости',
+            index: '07',
+            href: '#',
+        },]
+
+section#services
+    .container
+        .section-title Услуги
+        .section-subtitle Я выезжаю на объекты в Москве и Московской области
+        .services
+            ul.services__list
+                each val in servicesItems
+                    +card(val)(class="services__item")
+                li.services__item.services__item_last_child
+                    p.text-color-red Всегда выступаю на Вашей стороне. <br> Помогаю провести сделку с максимальной выгодой для клиента

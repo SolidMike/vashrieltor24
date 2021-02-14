@@ -1,0 +1,20 @@
+-
+    const aftermathItems = [
+        {src: './static/images/content/aftermath-1.jpg', title: 'Банк кредитор предлагает отсрочку', descr: 'После отсрочки платеж вырастет в несколько раз', index: '01'},
+        {src: './static/images/content/aftermath-2.jpg', title: 'Банк продает Вашу закладную любому желающему', descr: 'Ждите визита коллекторов или новых владельцев закладной', index: '02'},
+        {src: './static/images/content/aftermath-3.jpg', title: 'Банк подает в суд на выселение', descr: 'Даже из единственного жилья, в том числе с прописанными детьми', index: '03'},
+        {src: './static/images/content/aftermath-4.jpg', title: 'Недвижимость продают с аукциона по оценочной стоимости', descr: 'Ниже рыночной. С вас еще и судебные расходы', index: '04'},
+        {src: './static/images/content/aftermath-5.jpg', title: 'Вас принудительно выселяют', descr: 'И приставы официально забирают всю технику и ценности для погашения Вашего долга', index: '05'},]
+section#aftermath
+    .container
+        .aftermath
+            ul.aftermath__list.item-list
+                li.aftermath__item.item-list__item
+                    .inner-wrapper
+                        span.text-rotated.inner-wrapper__text-1 Что будет?
+                        span.text-color-red.aftermath__item_text_large.inner-wrapper__text-2 Если не платить вовремя
+                        span.inner-wrapper__text-3 по ипотеке или кредитам?
+                each val in aftermathItems
+                    +card(val)(class="aftermath__item")
+
+    .aftermath__aside

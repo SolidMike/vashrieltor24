@@ -1,0 +1,17 @@
+.modal-callback {
+  display: none;
+  text-align: center;
+  & * {
+    margin-top: 1rem;
+    &:first-child {
+      margin-top: 0;
+    }
+  }
+  &__title {
+    font-size: 2rem;
+  }
+  &__form {
+    display: flex;
+    flex-direction: column;
+  }
+}

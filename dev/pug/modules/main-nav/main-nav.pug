@@ -1,0 +1,13 @@
+.main-nav
+    -
+        const menuItems = [
+            {item: 'Главная', href: '/'},
+            {item: 'Обо мне', href: '#about-screen-screen'},
+            {item: 'Услуги', href: '#services-screen-screen'},
+            {item: 'Отзывы', href: '#comments'},
+            {item: 'Статьи', href: '#articles'},
+            {item: 'Контакты', href: '#contacts'},]
+    ul.main-nav__list
+        each val in menuItems
+            li.main-nav__item
+                a(href=val.href).main-nav__link= val.item

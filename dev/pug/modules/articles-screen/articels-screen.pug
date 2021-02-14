@@ -1,0 +1,21 @@
+-
+    const articlesItems = [
+        {img: './static/images/content/articles-1.jpg', link: '/2020/04/22/bank-podal-v-sud-chto-delat/', descr: 'Никому не пожелаешь оказаться в такой ситуации, но к сожалению и такие клиенты есть. Расскажу Вам историю, которая началась в начале этого года...'},
+        {img: './static/images/content/articles-2.jpg', link: '/2020/04/22/pervyj-i-poslednij-etazh/', descr: 'Чаще всего квартира на первом этаже стоит дешевле остальных. Конечно есть свои минусы: 🔹 Люди с улицы постоянно заглядывают в окна, значит...'},
+        {img: './static/images/content/articles-3.jpg', link: '/2020/04/16/problemnaya-kvartira/', descr: 'Все чаще обращаются клиенты с ипотечной квартирой, заложенной недвижимостью, задолженностью по ЖКХ. У всех один вопрос: как погасить долг и...'}]
+section#articles
+    .container
+        .section-title Статьи
+        .articles
+            a(href="/news/").articles__show-all Посмотреть все статьи
+            ul.articles__list.item-list
+                each val in articlesItems
+                    .articles__item.item-list__item
+                        a(href= val.link class="item-list__link")
+                            img(src= val.img).item-list__img
+                        .item-list__content
+                            .item-list__descr= val.descr
+                            a(href= val.link).articles__link Читать
+
+
+

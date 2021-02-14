@@ -1,0 +1,16 @@
+mixin card(obj, index)
+    li.item-list__item&attributes(attributes)
+        if obj.href
+            a(href= obj.href class="item-list__link")
+                img(src=obj.src).item-list__img
+            .item-list__content
+                .item-list__index= obj.index
+                a(href= obj.href class="item-list__link")
+                    .item-list__title!= obj.title
+                .item-list__descr!= obj.descr
+        else
+            img(src=obj.src).item-list__img
+            .item-list__content
+                .item-list__index= obj.index
+                .item-list__title= obj.title
+                .item-list__descr= obj.descr

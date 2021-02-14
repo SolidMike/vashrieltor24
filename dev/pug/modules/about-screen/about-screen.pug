@@ -1,0 +1,28 @@
+-
+    const aboutItems = [
+        {index: '01', descr: 'Решаю любые вопросы с жилой и коммерческой недвижимостью'},
+        {index: '02', descr: 'Знаю, как помочь на любом этапе: ипотека, суд, арест, торги'},
+        {index: '03', descr: 'Провел более 970 успешных сделок. 15 лет работаю с недвижимостью'},
+        {index: '04', descr: 'Помог в решении проблем более чем 130 семьям'},
+        {index: '05', descr: 'Работаю официально по договору'},]
+section#about
+    .container
+        .about
+            .about__img(style="background-image:url('./static/images/content/about.jpg')")
+            .about__content
+                .about__owner
+                    img(src="./static/images/content/owner.png").about__portrait
+                    .about__name #[span.text-color-red Маркетов] Михаил Юрьевич
+                    .about__position Риэлтор, специалист по проблемной недвижимости, экономист
+                ul.about__list
+                    each val in aboutItems
+                        li.about__item
+                            .text-rotated.about__index= val.index
+                            .about__descr= val.descr
+                .about__quote Не ждите суда - #[span.text-color-red вовремя обратитесь] к специалисту! #[span.text-color-red "]
+                .about__apply
+                    +link('modal-btn', '#modal-callback', 'Обратиться')
+                    img(src="./static/images/content/signature.png").about__signature
+            .about__aside
+            .about__aside-bottom
+

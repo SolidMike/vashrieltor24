@@ -1,0 +1,35 @@
+#seo {
+  padding-top: 0;
+}
+.seo {
+  display: grid;
+  grid-gap: 2rem;
+  &__text-top {
+    grid-column: 1 / 3;
+    grid-row: 1 / 2;
+    @media (max-width: 1000px) {
+      grid-column: 1;
+      grid-row: 1;
+    }
+  }
+  &__text-left {
+    grid-column: 1 / 2;
+    grid-row: 2 / 3;
+    @media (max-width: 1000px) {
+      grid-column: 1;
+      grid-row: 2;
+    }
+  }
+  &__text-right {
+    grid-column: 2 / 3;
+    grid-row: 2 / 3;
+    @media (max-width: 1000px) {
+      grid-column: 1;
+      grid-row: 3;
+    }
+  }
+  @media (max-width: 1000px) {
+    height: 300px;
+    overflow-y: scroll;
+  }
+}

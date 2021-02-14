@@ -1,0 +1,66 @@
+.banner {
+  max-width: 1060px;
+  padding: calc(1rem + 2vw) calc(1rem + 3vw);
+  background: rgba(255,255,255,.8);
+  text-align: center;
+  width: 100%;
+  &__title {
+    font-size: calc(1rem + 1.5vw);
+    font-weight: 600;
+  }
+  &__list {
+    display: flex;
+    justify-content: center;
+    flex-wrap: wrap;
+    margin: 0 -1rem;
+  }
+  &__item {
+    position: relative;
+    margin: .5rem 1rem;
+    &::before{
+      content: '';
+      position: absolute;
+      height: 7px;
+      width: 7px;
+      border-radius: 50%;
+      background-color: $red;
+      left: -.8rem;
+      top: 50%;
+      transform: translateY(-50%);
+    }
+  }
+  &__quote {
+    font-size: calc(1rem + 1.3vw);
+    margin-top: calc(1rem + 1vw);
+    &_weight_bold {
+      font-weight: 600;
+    }
+  }
+  &__author {
+    font-size: calc(1rem + .2vw);
+    position: relative;
+    overflow: hidden;
+    text-align: center;
+    font-weight: 600;
+    margin-top: 1rem;
+    &:before,
+    &:after {
+      position: absolute;
+      top: 51%;
+      overflow: hidden;
+      width: 5%;
+      height: 1px;
+      content: '\a0';
+      background-color: $black;
+    }
+    &:before {
+      margin-left: -7%;
+    }
+    &:after {
+      margin-left: 2%;
+    }
+  }
+  &__position {
+    font-size: 1.2rem;
+  }
+}

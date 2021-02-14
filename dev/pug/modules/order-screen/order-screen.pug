@@ -1,0 +1,22 @@
+-
+    const orderItems = [
+        {index: '01', descr: 'Не было <br> возможности <br> вовремя оплачивать ипотеку'},
+        {index: '02', descr: 'Банк забирал <br> квартиру за долги'},
+        {index: '03', descr: 'Арестовали квартиру'},
+        {index: '04', descr: 'Суд выставил квартиру на торги'},
+        {index: '05', descr: 'Продажа ипотечного жилья'},]
+section#order
+    .container
+        .order
+            .order__text
+                .order__title #[span.text-color-red более 130] семей
+                .order__subtitle Получили мою помощь, <br/> сохранив свой интерес
+            .order__button-wrapper
+                +link('modal-btn', '#modal-callback', 'Заказать звонок')
+            ul.order__list
+                each val in orderItems
+                    li.order__item
+                        .order__index= val.index
+                        .order__descr!= val.descr
+    .order__aside
+

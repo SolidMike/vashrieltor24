@@ -1,0 +1,28 @@
+-
+    const bannerItems = [
+        {item: 'Долги'},
+        {item: 'Арест'},
+        {item: 'Суды'},
+        {item: 'Торги'},
+        {item: 'Другие сложности'},]
+section#first-screen(style="background: url('./static/images/general/first-screen-bg.jpg')")
+    .first-screen
+        .first-screen__banner.banner
+            .banner__title Квартира в ипотеке и возникли проблемы?
+            ul.banner__list
+                each val in bannerItems
+                    li.banner__item= val.item
+            .banner__quote-block
+                .banner__quote "В любой ситуации есть #[span.banner__quote_weight_bold правильное решение]
+                .banner__author
+                    span Михаил Юрьевич Маркетов
+                .banner__position Специалист по проблемной недвижимости
+        .first-screen__form-order.form-order
+            .form-order__title Закажите #[span.text-color-red бесплатную] консультацию
+            .form-order__policy
+                | * Нажимая на кнопку вы даете согласие на обработку
+                | своих персональных данных
+            form(action="#" method="post").form-order__form
+                input(type="text" name="name" placeholder="Имя").input
+                input(type="tel" name="phone" placeholder="Телефон").input
+                +button('', 'Заказать', false)
